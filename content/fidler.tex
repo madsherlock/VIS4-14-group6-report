@@ -28,8 +28,9 @@ The motivation for using a hierarchy is discussed in section \ref{sec:deep_hiera
 Three different types of layers is used: 
 \todo[inline, author=Michael]{I need a graphic here.. }
 
-\paragraph*{The bottom layer} extracts simple features (edges) from the image. It uses a filter bank\footnote{A filter bank is simple an array of filters that splits the signal into different components. (ref: wikipedia filter bank)}
- consisting of 6 different Gabor filters of different orientation.\footnote{Gabor filters is a combination of a Sinus and a Gaussian distribution that is often used within computer vision for edge detection. (need ref)} 
+\paragraph*{The bottom layer} extracts simple features (edges) from the image. It uses a filter bank\footnote{A filter bank is simple an array of filters that splits the signal into different components. \\
+\url{http://en.wikipedia.org/wiki/Filter_bank} }
+ consisting of 6 different Gabor filters of different orientation.\footnote{Gabor filters is a combination of a Sinus and a Gaussian distribution that is often used within computer vision for edge detection. \citep{kamarainen2012gabor}} 
 The filter bank is shown in figure \ref{fig:filterbank}. 
 This filter bank is applied directly to the image and the most prominent features is extracted. 
 This is done by comparing the response of the filters with a threshold value, and thereby the sensitivity and number of extracted features can be controlled
