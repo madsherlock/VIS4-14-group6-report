@@ -10,9 +10,19 @@ The primate brain's ability to categorize and recognize objects could lead to th
 Although the idea of implementing a visual computer system analog to the biological visual system in the primate brain has existed since the 1960's (SOURCE) there is still long way for such a system to be developed. The theories proposed by Marr(SOURCE) had, until recently been found difficult to implement due to lack of computational power. Hence the main focus in general computer vision has been on designing individual task oriented algorithms that perform analysis and recognition of such features as color shape etc.
 The specific task of object recognition through pixel-information might seem easy as the human brain seems to do it instantly and effortlessly. However the huge amount of different objects in addition to variation of size, and posture in the 3D space is a great obstacle in the development of object recognition. Imaging a the simple concept of a cup. As humans we instantly recognize the use of it even when we have never seen that specific type of cup. Size, shape, handle, no handle colour etc.
 
-The complexity of the unbounded visual search(FIND OUT WHAT THIS MEANS) is NP complete(SOURCE 53).  A solution build on a hierarchal structure could very well be the way to develop such a system as it has been found in the primate brain.
 
 \section*{Flat processing Schemes vs. Deep Hierarchies}
+
+The complexity of the unbounded visual search(FIND OUT WHAT THIS MEANS) is NP complete(SOURCE 53).  A solution build on a hierarchal structure could very well be the way to develop such a system as it has been found in the primate brain.
+
+\begin{figure}[h!] %fancyboxes
+\centering
+\includegraphics[width=0.5\textwidth]{graphics/deepvsflat}
+\caption{Deep hierarchies and flat processing schemes}
+\label{fig:deepvsflat}
+\end{figure}
+
+
 A hierarchical model consists of a number of layers placed “on top of each-other”. Each item in a layer, representing more advanced features, is composed of items from the layers below which represents simpler features. The smallest feature being an edge. 
 (Based on Visual Hierachies)
 This form of representation gives some main advantages taking the aspect of computational efficiency and storage space into account. As said before layers of more advanced features are composed from elements of the layer below hence only the fundamental building blocks are stored. In addition this method takes advantage of the fact that some lower level items will be reused in many of the items in layers above which minimizes the need of duplicates. With this form of representation we only need very few actual descriptors around 10-20 in the lower layers and in the range of thousands in the upper layers(REFFidler). 
