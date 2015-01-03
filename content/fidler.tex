@@ -2,14 +2,13 @@
 \label{sec:fidler}
 \todo[inline, author=Michael]{Draft. Please add some comments in todos.. need feedback}
 This section aims to explain the work presented in \cite{fidler2009learning}. 
-\todo[inline, author=Michael]{Ref the study here. I dont know how we do this?}
 In their paper "Learning Hierarchical Compositional Representation of Object Structure" they proposed to use hierarchical compositionality (explained in section \ref{sec:hierarchical-comp}) for object recognition. 
 
 \subsection{Hierarchical compositionality}
 \label{sec:hierarchical-comp}
-In essence, the term compositionality refers to complex parts made from combining other parts. 
+In essence, the term compositionality refers to complex parts made from combining other parts. \cite[p. 2]{fidler2007towards}
 %\todo[inline, author=Michael]{Here is a tangent: 
-The term is used within mathematics and languages as well, but we will only focus on the way to extract visual features. 
+The term is used within mathematics and languages as well, but here, only its use in extracting visual features is discussed. 
 %} 
 
 An example of combining multiple parts into a more complex part is shown in figure \ref{fig:compositionality1}. 
@@ -128,8 +127,8 @@ Some of the learned features is shown in figure \ref{fig:layer2+3}.
 
 The category specific layers was also tested. Multiple categories was learned, one of them being faces. 
 The faces was learned by using 20 images containing faces. Parts in $\mathcal{L}_{4}$ was then used to learn $\mathcal{L}_{5}$ by  looking at the parts relative to the center of the face. 
-The learned features for faces is shown if figure \ref{fig:layer4-5}.
-\todo[inline, author=Michael]{Is the following picture necessary?}
+The learned features for faces is shown in figure \ref{fig:layer4-5}.
+
 
 \begin{figure}[h!] %faces layer 4 + 5
 \centering
