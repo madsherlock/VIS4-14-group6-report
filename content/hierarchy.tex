@@ -12,19 +12,21 @@ The specific task of object recognition through pixel-information might seem eas
 
 
 \section*{Flat processing Schemes vs. Deep Hierarchies}
-In the SIFT structure an object is identified by obtaining features, known as keys, in an input image and then search for these features in a database. When multiple statements point at a specific object further effort will be made to specify it. The complexity of this unbounded visual search(refereed to as flat processing scheme) is NP complete\citep{fidler2009learning}.
+\todo[inline]{This afsnit is based on \textbf{(Based on Visual Hierachies)}}
+
+In the SIFT object recognition algorithm an object is identified by obtaining features, known as keys, in an input image and then search for these features in a database. When multiple statements point at a specific object further effort will be made to specify it and eventually an object will be identified given that it is in the database. The complexity of this unbounded visual search(refereed to as flat processing scheme) is NP complete\citep{fidler2009learning}.\\
+In figure \ref{fig:deepvsflat} right (borrowed from \citep{VisualHierarchy}) we see a graphical representation of the flat processing scheme where each task oriented algorithms compute with respect to a big database of known features. On the left is the representation of a hierarchal structure where common computations are made to support multiple task.
 
 \begin{figure}[h!] %fancyboxes
 \centering
-\includegraphics[width=0.5\textwidth]{graphics/deepvsflat}
+\includegraphics[width=0.6\textwidth]{graphics/deepvsflat}
 \caption{Deep hierarchies and flat processing schemes}
 \label{fig:deepvsflat}
 \end{figure}
 
-A solution build on a hierarchal structure could very well be the best way to develop such a system as it has been found in the primate brain. As mentioned the human brain seem to interpret visual stimuli with very little effort and therefore trying to emulate the brain of primates might help in optimizing object recognition in computer vision. Especially the relatively recent development of multi-core systems in computer science greatly supports the development of these structures as parallel processing is of fundamental character in the primate brain.\citep{fidler2009learning}  \\
-A hierarchical model consists of a number of layers placed “on top of each-other”. Each item in a layer, representing more advanced features, is composed of items from the layers below which represents simpler features. The smallest feature being an edge. 
-(Based on Visual Hierachies)
-This form of representation gives some main advantages taking the aspect of computational efficiency and storage space into account. As said before layers of more advanced features are composed from elements of the layer below hence only the fundamental building blocks are stored along with information regarding connections of compositions. In addition this method takes advantage of the fact that some lower level items will be reused in many of the items in layers above which minimizes the need of duplicates. With this form of representation we only need very few actual descriptors around 10-20 in the lower layers and in the range of thousands in the upper layers\citep{fidler2009learning}. 
+Computer vision build on a hierarchal structure could very well be a more optimized way to develop a robust system as it has been found in the primate brain. As mentioned the human brain seem to interpret visual stimuli with very little effort and therefore trying to emulate the brain of primates might help in optimizing object recognition in computer vision. Especially the relatively recent development of multi-core systems in computer science greatly supports the idea of these structures as parallel processing is of fundamental character in the primate brain.\citep{fidler2009learning}  \\
+A hierarchical model consists of a number of layers placed “on top of each-other”. Each item in a layer, representing more advanced features, is composed of items from the layers below which represents simpler features. The smallest feature being an edge. \\
+This form of representation gives some main advantages taking the aspect of computational efficiency and storage space into account. As stated layers of more advanced features are composed from elements of the layer below hence only the fundamental building blocks are stored along with information regarding connections of compositions. In addition this method takes advantage of the fact that some lower level items will be reused in many of the items in layers above which minimizes the need of duplicates. With this form of representation we only need very few actual descriptors around 10-20 in the lower layers and in the range of thousands in the upper layers\citep{fidler2009learning}. 
 In fact the best “flat processing schemes” of today must store millions of small images with 25 x 25 pixels as descriptors in order to get satisfying results which is in great contrast to hierarchies.\citep{fidler2009learning}
 
 Another advantage of the Deep Hierarchy is what is refereed to as generalization. Generalization means that like in the primal brain we can make common calculations that will apply for several individual tasks related to computervision such as object recognition and categorization, grasping, manipulation, path planning, etc. \textbf{(REF:Visual Hierarchies)}
